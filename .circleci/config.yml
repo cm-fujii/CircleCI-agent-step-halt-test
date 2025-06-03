@@ -16,6 +16,15 @@ jobs:
           command: |
             echo "run unit-test"
 
+            circleci-agent step halt
+
+            echo "running??"
+
+            sleep 10
+
+            echo "running????"
+
+
   deploy:
     executor: normal_container
     steps:
@@ -23,6 +32,14 @@ jobs:
           name: deploy
           command: |
             echo "run deploy"
+
+            circleci-agent step halt
+
+            echo "running??"
+
+            sleep 10
+
+            echo "running????"
 
 workflows:
   release:
