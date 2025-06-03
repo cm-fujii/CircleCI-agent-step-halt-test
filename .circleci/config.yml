@@ -23,6 +23,15 @@ jobs:
             sleep 10
 
             echo "running????"
+      - run:
+          name: unit-test-2
+          command: |
+            echo "run unit-test-2"
+
+            sleep 5
+
+            echo "running unit-test-2"
+
 
 
   deploy:
@@ -40,6 +49,14 @@ jobs:
             sleep 10
 
             echo "running????"
+      - run:
+          name: deploy-2
+          command: |
+            echo "run deploy-2"
+
+            sleep 5
+
+            echo "running deploy-2"
 
 workflows:
   release:
